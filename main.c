@@ -16,10 +16,7 @@ int sum_n(int n) {
 }
 
 void print_n(const char *s, int n){
-  if (n <= 0){
-    return;
-
-  } else {
+  if (n > 0){
     printf ("%s\n",s);
     print_n(s, n-1);
   }
@@ -30,7 +27,7 @@ int main(void) {
   int intNumber =atoi(number);
   printf("sum is %d.\n", sum_n(intNumber));
   char*word=readline("Enter a string: ");
-  printf(word, intNumber);
+  print_n(word, intNumber);
   
 }
 
